@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Fira'; 
+    src: url('../assets/fonts/FiraCode.ttf');
+}
+* {
+    --rgb--bg: #2F2504;
+    --rgb--accent: #A5AE9E;
+    --rgb--accent2: #7E846B;
+    --rgb--content: #D0DDD7;
+    --rgb--title: #261E03;
+    --rgb--main: #594E36;
+    --rgb-main2: #7EBC89;
+    --rgb--shadow: #1b1b20;
+
+    --fontweight--light: 100;
+    --fontweight--bold: 500;
+    --fontweight--black: 800;
+}
+body {
+    background-color: var(--rgb--bg);
+    color: var(--rgb--content);
+    font-family: 'Fira';
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--rgb--accent);
+    animation: headerIn 0.5s forwards;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    padding: 1vh 6vw;
+    box-shadow: 0 0.5vw 5px var(--rgb--shadow);
+}
+@keyframes headerIn {
+    0% {
+        height: 0vw;
+        overflow: hidden;
+    }
+    80% {
+        height: 9vw;
+        overflow: hidden;
+    }
+    100% {
+        height: 8vw;
+    }
+}
+.title_wrapper {
+    float: left;
+}
+.title_wrapper {
+    color: var(--rgb--title);
+}
+.user_wrapper {
+    color: var(--rgb--title);
+    float: right;
+}
+.title {
+    
+    line-height: 0.25em;
+    font-size: clamp(16px, 2vw, 999px);
+    font-weight: var(--fontweight--bold);
+}
+.title.maintitle {
+    font-size: clamp(16px, 3vw, 999px);
+    font-weight: var(--fontweight--black);
+}
+
+.usericon {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    margin: 0;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: var(--rgb--accent2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.username {
+    font-size: 4vw;
+}
+
+.normaltext {
+    font-size: 2vw;
+}
+main {
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+.row_item {
+    width: min-content;
+    display: grid;
+    grid-auto-flow: column;
+}
+.card {
+    width: min-content;
+    background-color: var(--rgb--main);
+    padding: 1em;
+    margin: 1vw;
+    box-shadow: 0 0.5vw 5px var(--rgb--shadow);
+    border-radius: 10px;
+}
+.card.accent {
+    background-color: var(--rgb--accent2);
+}
+
+
+@media (max-width: 500px) {
+    header {
+        display: none;
+    }
+    body {
+      font-size: 16px; /* Example: Change font size for small screens */
+    }
+    .row_item {
+        display: block;
+        width: 73%;
+    }
+    .row_item > * {
+        margin: 1em;
+        width: 100%;
+    }
+
+
+  }
+
+.graph {
+    margin: 0.5em 1em;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 0.5vw 5px var(--rgb--shadow);
+}
