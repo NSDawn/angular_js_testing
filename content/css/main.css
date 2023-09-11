@@ -2,6 +2,10 @@
     font-family: 'Fira'; 
     src: url('../assets/fonts/FiraCode.ttf');
 }
+@font-face {
+    font-family: 'Noto Emoji'; 
+    src: url('../assets/fonts/NotoEmoji.ttf');
+}
 * {
     --rgb--bg: #2F2504;
     --rgb--accent: #A5AE9E;
@@ -19,7 +23,7 @@
 body {
     background-color: var(--rgb--bg);
     color: var(--rgb--content);
-    font-family: 'Fira';
+    font-family:  'Fira', 'Noto Emoji';
     margin: 0;
     padding: 0;
 }
@@ -92,13 +96,11 @@ main {
     flex-direction: column;
 }
 .row_item {
-    width: min-content;
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
 }
 .card {
-    width: min-content;
     background-color: var(--rgb--main);
+    max-width: 60vw;
     padding: 1em;
     margin: 1vw;
     box-shadow: 0 0.5vw 5px var(--rgb--shadow);
