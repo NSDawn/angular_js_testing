@@ -13,7 +13,7 @@
     --rgb--content: #D0DDD7;
     --rgb--title: #261E03;
     --rgb--main: #594E36;
-    --rgb-main2: #7EBC89;
+    --rgb--main2: #404b42;
     --rgb--shadow: #1b1b20;
 
     --fontweight--light: 100;
@@ -148,13 +148,33 @@ main {
     border-radius: 5px;
 }
 
+.search_button {
+    font-size: inherit; 
+    font-family: inherit;
+    border: none;
+    padding: 0.25em; 
+    border-radius: 5px;
+    box-shadow: 0 0.5vw 5px var(--rgb--shadow);
+
+}
+.search_button:hover {
+    background-color: var(--rgb--main);
+    transform: translateY(0.25vh);
+    box-shadow: none;
+
+}
+
 .dict_viewport {
+    box-shadow: 0 0.5vw 5px var(--rgb--shadow);
     margin: 1em 0.25em;
-    background-color: var(--rgb--accent);
-    padding: 0.5em;
+    background-color: var(--rgb--main2);
+    padding: 1em;
     border-radius: 10px;
+    width: 30vw;
+    height: 50vh;
+    overflow: scroll;
 }
 .dict_entry_list {
     padding: 0;
-    margin: 0 1em;
+    margin: 0 2em;
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="content/css/main.css" type="text/css" />
-    <script src="app/lib/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="content/assets/graphs/examplegraph.js" defer></script>
     <script src="content/assets/scripts/jisho.js" defer></script>
@@ -57,16 +57,26 @@
                 <h3 class="title normallineheight">
                     📖 Japanese Dictionary
                 </h3>
-                <input class="dict_input" type="text" />
-                <div class="dict_viewport">
-                    火曜日
-                    <ul class="dict_entry_list">
-                        <li>eigweg</li>
-                        <li>egaewgew</li>
-                        <li>age</li>
-                    </ul>
-                    
+                <div ng-app="jishoApp"  ng-controller="jishoController as jisho">
+                    <input ng-model="search_query" class="dict_input search_query" type="text" />
+                    <button class="search_button" ng-click="update()">search/検索</button>
+                    <div class="dict_viewport">
+                        <ul class="dict_entry_list">
+                            <span>{{msg}}</span>
+                            <li ng-repeat="word in data.words">
+                                {{word.reading.kanji}}【{{word.reading.kana}}】 
+                                <br />
+                                <ul>
+                                    <li ng-repeat="senses in word.senses">
+                                        <span ng-repeat="gloss in senses.glosses">{{gloss}}; </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </div>
+                
 
             </div>
         </div> 
