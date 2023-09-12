@@ -23,7 +23,7 @@
 body {
     background-color: var(--rgb--bg);
     color: var(--rgb--content);
-    font-family:  'Fira', 'Noto Emoji';
+    font-family: 'Fira', 'Noto Emoji';
     margin: 0;
     padding: 0;
 }
@@ -135,4 +135,23 @@ main {
     border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 0.5vw 5px var(--rgb--shadow);
+}
+
+.dict_input {
+    font-size: inherit; 
+    font-family: inherit;
+    border: none;
+    padding: 0.25em; 
+    border-radius: 5px;
+}
+
+.dict_viewport {
+    margin: 1em 0.25em;
+    background-color: var(--rgb--accent);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+.dict_entry_list {
+    padding: 0;
+    margin: 0 1em;
 }
